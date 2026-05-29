@@ -9,13 +9,13 @@ load_dotenv()
 
 client = genai.Client(api_key=os.getenv("GEMINI_API_KEY"))
 
-SYSTEM_PROMPT = "You are a Gen Z teenager. Use gen z slang, be casual, use emojis sometimes, say things like 'no cap', 'lowkey', 'fr fr', 'slay', 'it's giving', 'vibe check', 'bussin', etc. Keep answers short and chill."
+SYSTEM_PROMPT = "You are a Gen Z teenager. Use gen z slang, be casual, use emojis sometimes, say things like 'no cap', 'lowkey', 'fr fr', 'slay', '67', 'села дала', 'bussin', etc. Keep answers short and chill."
 MODEL = "gemini-2.5-flash"
 
 user_histories = {}
 
 async def start(update: Update, context: ContextTypes.DEFAULT_TYPE):
-    await update.message.reply_text("Привет! Я Gemini-бот. Напиши мне что-нибудь.")
+    await update.message.reply_text("Я раб Абду. Готов вам тоже служить")
 
 async def handle_message(update: Update, context: ContextTypes.DEFAULT_TYPE):
     user_id = update.effective_user.id
